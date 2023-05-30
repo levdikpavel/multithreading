@@ -26,13 +26,13 @@ func main() {
 	}
 
 	go func() {
-		for i := 0; i < 100000; i++ {
+		for i := 0; i < 1000000; i++ {
 			s.write(i)
 		}
 	}()
 
 	go func() {
-		for i := 0; i < 100000; i++ {
+		for i := 0; i < 1000000; i++ {
 			s.check()
 		}
 	}()

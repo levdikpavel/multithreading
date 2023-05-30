@@ -8,6 +8,8 @@ import (
 func main() {
 	go func() {
 		fmt.Println("hello from anonymous func")
+		//time.Sleep(time.Second * 2)
+		//fmt.Println("hello 2")
 	}()
 
 	go printHello()
@@ -15,7 +17,8 @@ func main() {
 	var p printer
 	go p.printHello()
 
-	time.Sleep(1)
+	time.Sleep(time.Second)
+	//fmt.Scanln()
 }
 
 func printHello() {

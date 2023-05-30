@@ -14,11 +14,11 @@ func main() {
 	}
 }
 
-func generate(c chan<- int) {
+func generate(in chan<- int) {
 	for i := 0; i < 5; i++ {
-		c <- i
+		in <- i
 	}
-	close(c)
+	close(in)
 }
 
 func square(in <-chan int, out chan<- int) {

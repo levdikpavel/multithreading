@@ -20,10 +20,10 @@ func main() {
 	}()
 
 	time.Sleep(time.Second / 2)
-	ticker := time.NewTicker(time.Second * 5)
+	longTicker := time.NewTicker(time.Second * 5)
 	for {
 		select {
-		case <-ticker.C:
+		case <-longTicker.C:
 			fmt.Println("---------- long job", time.Since(start))
 			time.Sleep(time.Second * 4)
 		case <-c:

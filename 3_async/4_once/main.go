@@ -19,3 +19,7 @@ func main() {
 
 	time.Sleep(time.Second)
 }
+
+//func init() {
+//	fmt.Println("hello from init()")
+//}
