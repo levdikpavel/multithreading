@@ -14,5 +14,6 @@ func main() {
 		}()
 	}
 	time.Sleep(time.Second / 2)
+	//fmt.Println(count.Swap(5))
 	fmt.Println(count.Load())
 }
